@@ -1,0 +1,29 @@
+<h1>Listing gradelists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Id</th>
+      <th>Scr</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gradelists.each do |gradelist| %>
+      <tr>
+        <td><%= gradelist.name %></td>
+        <td><%= gradelist.id %></td>
+        <td><%= gradelist.scr %></td>
+        <td><%= link_to 'Show', gradelist %></td>
+        <td><%= link_to 'Edit', edit_gradelist_path(gradelist) %></td>
+        <td><%= link_to 'Destroy', gradelist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gradelist', new_gradelist_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gradelist.name %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @gradelist.id %>
+</p>
+
+<p>
+  <strong>Scr:</strong>
+  <%= @gradelist.scr %>
+</p>
+
+<%= link_to 'Edit', edit_gradelist_path(@gradelist) %> |
+<%= link_to 'Back', gradelists_path %>
